@@ -403,6 +403,10 @@ begin
           assertions = true
           assignableconst = false
           booleval = false
+          compilerwarnings = "-w-UNSAFE_TYPE\=0" +
+                             "-w-UNSAFE_CODE\=0" +
+                             "-w-UNSAFE_CAST\=0" +
+                             ""
           conditionals = RELEASE;CI
           consoleapp = false
           debuginfo = false
