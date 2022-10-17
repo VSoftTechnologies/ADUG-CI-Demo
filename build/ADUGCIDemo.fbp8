@@ -37,6 +37,20 @@ begin
                       "ReleaseVersion\=-1" +
                       ""
       end
+      action.continua.set-buildstatus
+      begin
+        actiontypeid = {4C731FDD-33BB-486E-9A30-27A7A26E3C92}
+        customactionname = "Continua CI - Set Build Status"
+        enabletimeout = false
+        id = {8744EE0E-63B4-44F9-9D5A-0F0917477F13}
+        impersonateusenetcredonly = false
+        impersonateuser = false
+        terminateontimeout = true
+        timeoutlength = 2
+        as.status = "Building Win32 Version"
+        as.verbose = False
+        as.failbuildonerror = False
+      end
       action.delphi.build
       begin
         allowimplicitimport = true
@@ -162,6 +176,20 @@ begin
           usepackages = false
           varstringchecks = true
         end
+      end
+      action.continua.set-buildstatus
+      begin
+        actiontypeid = {4C731FDD-33BB-486E-9A30-27A7A26E3C92}
+        customactionname = "Continua CI - Set Build Status"
+        enabletimeout = false
+        id = {F22C392D-7615-4CD1-800F-8101CA151E6C}
+        impersonateusenetcredonly = false
+        impersonateuser = false
+        terminateontimeout = true
+        timeoutlength = 2
+        as.status = "Building Win64 Version"
+        as.verbose = False
+        as.failbuildonerror = False
       end
       action.delphi.build
       begin
