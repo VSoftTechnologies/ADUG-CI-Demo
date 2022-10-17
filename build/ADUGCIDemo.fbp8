@@ -51,6 +51,11 @@ begin
         as.verbose = False
         as.failbuildonerror = False
       end
+      action.delay
+      begin
+        delay = 2000
+        id = {C4A29BFD-00EE-43F3-87EF-E99E10398A5D}
+      end
       action.delphi.build
       begin
         allowimplicitimport = true
@@ -190,6 +195,11 @@ begin
         as.status = "Building Win64 Version"
         as.verbose = False
         as.failbuildonerror = False
+      end
+      action.delay
+      begin
+        delay = 2000
+        id = {793D7C94-CE38-4DB5-9795-938BE4DB8482}
       end
       action.delphi.build
       begin
