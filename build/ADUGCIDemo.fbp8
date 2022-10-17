@@ -198,7 +198,7 @@ begin
         majorversion = 1
         minorversion = 0
         noconfig = false
-        platform = Win32
+        platform = Win64
         platformsdktype = ProjectSDK
         projectfile = %SRCROOT%\\ADugCIDemo.dpr
         regenerateresource = true
@@ -261,13 +261,13 @@ begin
           includetd32 = false
           inlining = inOn
           iochecking = true
-          librarypath = $(BDSLIB)\\$(Platform)\\release;$(BDSUSERDIR)\\Imports;$(BDSUSERDIR)\\Imports\\$(Platform);$(BDS)\\Imports;$(BDSCOMMONDIR)\\Dcp;$(BDS)\\include
+          librarypath = $(BDSLIB)\\$(Platform)\\release;$(BDSUSERDIR)\\Imports\\$(Platform);$(BDSUSERDIR)\\Imports\\$(Platform);$(BDS)\\Imports;$(BDSCOMMONDIR)\\Dcp;$(BDS)\\include
           linkeroutput = 0
           localsymbols = false
           mapfile = 0
           maxstacksize = 1048576
           minstacksize = 16384
-          namespaceprefixes = System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;
+          namespaceprefixes = System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;Data.Win;Web.Win;Soap.Win;
           openstrings = true
           optimisation = true
           outputdir = %OutputDir%\\$(PLATFORM)
