@@ -2,3 +2,5 @@ VersionInfo_MajorVersion=$Build.Version.Default.Major$
 VersionInfo_MinorVersion=$Build.Version.Default.Minor$
 VersionInfo_ReleaseVersion=$Build.Version.Default.Revision$
 VersionInfo_BuildVersion=$Build.Version.Default.Build$
+OutputDir=$Workspace$/output
+DUnitX=$Source.DunitX$/Source

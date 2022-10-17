@@ -7,7 +7,10 @@
       @import url(https://fonts.googleapis.com/css?family=Roboto);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-      body { font-family: 'Roboto'; }
+      body { 
+          font-family: 'Roboto'; 
+          background-color: #ccc;
+        }
       h1, h2, h3 {
         font-weight: normal;
         margin-block-start: .25em;
@@ -20,17 +23,29 @@
       }
 
       .remark-slide-content {
-        font-size: 20px  ;
+        font-size: 1.45rem  ;
       }      
       
             
       img {
 		    max-width:100%;
 	    }
+      .remark-slide-scaler {
+        background-color: rgb(145, 46, 46);
+      }
 
       .remark-slide-content h1 {
-        font-size: 36px;
+        font-size: 2.5rem;
       }
+      .remark-slide-content h2 {
+        font-size: 1.75rem;
+      }
+      
+      .remark-slide-content h3 {
+        font-size: 1.5rem;
+      }
+      
+
 
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
     </style>
@@ -44,23 +59,49 @@ class: center, middle
 
 ---
 
-# Agenda
+# Devops Quick Overview
+The term 'DevOps' was coined in 2009 by Patrick Debois
 
-1. Devops Quick Overview 
-2. What is Continuous Integration
-3. CI For Solo Developers
-4. CI vs Automated Builds
-5. A quick look at the Build Script.
-6. CI Getting started.
+DevOps is a Methodology - not a product!
 
 ---
 
 # Devops Quick Overview
-The term 'DevOps' was coined by Patrick Debois, who is considered one of the methodology’s primary gurus (not Microsoft!)
+The term 'DevOps' was coined in 2009 by Patrick Debois
+
+DevOps is a Methodology - not a product!
+
+- Emphasis on breaking down Development and Operations Silos. 
+---
+
+# Devops Quick Overview
+The term 'DevOps' was coined in 2009 by Patrick Debois
+
+DevOps is a Methodology - not a product!
+
+- Emphasis on breaking down Development and Operations Silos. 
+- Automation of the Software Development Lifecycle
+---
+
+# Devops Quick Overview
+The term 'DevOps' was coined in 2009 by Patrick Debois
+
+DevOps is a Methodology - not a product!
+
 - Emphasis on breaking down Development and Operations Silos. 
 - Automation of the Software Development Lifecycle
 - Collaboration and Communication
-- Focus on User needs and short feeback loops
+---
+
+# Devops Quick Overview
+The term 'DevOps' was coined in 2009 by Patrick Debois
+
+DevOps is a Methodology - not a product!
+
+- Emphasis on breaking down Development and Operations Silos. 
+- Automation of the Software Development Lifecycle
+- Collaboration and Communication
+- Focus on User needs and short feedback loops
 ![CI Workflow](img/devops.png)
 ---
 
@@ -72,6 +113,42 @@ Continuous integration is a DevOps software development practice where developer
 
 ---
 
+
+# Continuous Integration benefits
+
+- Feedback loop results in faster bug fixes  
+---
+
+# Continuous Integration benefits
+
+- Feedback loop results in faster bug fixes  
+- Reduced risk - tests run after every build 
+---
+
+# Continuous Integration benefits
+
+- Feedback loop results in faster bug fixes  
+- Reduced risk - tests run after every build 
+- Fault isolation is easier
+---
+
+# Continuous Integration benefits
+
+- Feedback loop results in faster bug fixes  
+- Reduced risk - tests run after every build 
+- Fault isolation is easier
+- Progress & Qualilty tracking
+---
+
+# Continuous Integration benefits
+
+- Feedback loop results in faster bug fixes  
+- Reduced risk - tests run after every build 
+- Fault isolation is easier
+- Progress & Qualilty tracking
+- Saves time and resources (automate all the things)
+---
+
 # Continuous Integration benefits
 
 - Feedback loop results in faster bug fixes  
@@ -80,14 +157,93 @@ Continuous integration is a DevOps software development practice where developer
 - Progress & Qualilty tracking
 - Saves time and resources (automate all the things)
 - Release more often (because it's easy)
+---
+
+
+# CI for solo developers?
+
+- Do you run your unit tests after every code change?
+
+---
+
+# CI for solo developers?
+
+- Do you run your unit tests after every code change?
+- Running tests on dev machine can be time consuming 
+
+---
+
+# CI for solo developers?
+
+- Do you run your unit tests after every code change?
+- Running tests on dev machine can be time consuming 
+- Can you carry on coding while tests run?
+---
+
+# CI for solo developers?
+
+- Do you run your unit tests after every code change?
+- Running tests on dev machine can be time consuming 
+- Can you carry on coding while tests run?
+- Automation is still worthwhile - humans are terrible at repetitive tasks
 
 ---
 # CI for solo developers?
 
 - Do you run your unit tests after every code change?
 - Running tests on dev machine can be time consuming 
+- Can you carry on coding while tests run?
 - Automation is still worthwhile - humans are terrible at repetitive tasks
-- Makes it easier to exit a business - can hand it over in a buildable state
+- Makes it easier to exit a software business - makes handover easier.
+
+---
+
+
+# CI vs Automated Builds
+
+- Automated Build - what/how to build
+
+---
+# CI vs Automated Builds
+
+- Automated Build - what/how to build
+- Continous Integration - When/Where to build
+
+---
+# CI vs Automated Builds
+
+- Automated Build - what/how to build
+- Continous Integration - When/Where to build
+- CI Servers have operation knowledge, it knows about the environment
+
+---
+# CI vs Automated Builds
+
+- Automated Build - what/how to build
+- Continous Integration - When/Where to build
+- CI Servers have operation knowledge, it knows about the environment
+- Build Scripts know about source code structure, dependencies  
+
+---
+
+# CI vs Automated Builds
+
+- Automated Build - what/how to build
+- Continous Integration - When/Where to build
+- CI Servers have operation knowledge, it knows about the environment
+- Build Scripts know about source code structure, dependencies  
+- Build Script should be in version control along with your source code 
+
+---
+
+# CI vs Automated Builds
+
+- Automated Build - what/how to build
+- Continous Integration - When/Where to build
+- CI Servers have operation knowledge, it knows about the environment
+- Build Scripts know about source code structure, dependencies  
+- Build Script should be in version control along with your source code 
+- Separation of concerns - avoid hard coding knowledge in multiple locations
 
 ---
 
@@ -100,30 +256,198 @@ Continuous integration is a DevOps software development practice where developer
 - Build Script should be in version control along with your source code 
 - Separation of concerns - avoid hard coding knowledge in multiple locations
 - Pass variables from CI server to Build Script (eg, passwords, server locations)
+---
 
-# Getting started with CI
 
-- Determine inputs and outputs
-- Create a build script (batch file, msbuild, FinalBuilder)
-- Make your build script location agnostic (use variables)
-- Configure your CI to run your build script
 
 # The Build Script - Batch files
 
-- Arcane syntax - 
+- Not recommended
+
+---
+
+# The Build Script - Batch files
+
+- Not recommended
+- Arcane syntax
+
+---
+
+# The Build Script - Batch files
+
+- Not recommended
+- Arcane syntax
+- Procedural 
+
+---
+
+# The Build Script - Powershell 
+## (or other scripting languages)
+
+- Better than batch files (anything is!)
+
+---
+
+# The Build Script - Powershell 
+## (or other scripting languages)
+
+- Better than batch files (anything is!)
+- Not designed for builds (you get to program everything!)
+
+---
+
+# The Build Script - Powershell 
+## (or other scripting languages)
+
+- Better than batch files (anything is!)
+- Not designed for builds (you get to program everything!)
+- You will be writing doco for handovers!
+
+---
+
+# The Build Script - Powershell 
+## (or other scripting languages)
+
+- Better than batch files (anything is!)
+- Not designed for builds (you get to program everything!)
+- You will be writing doco for handovers!
+- Procedural
+
+---
 
 # The Build script - MSBuild
+- Delphi projects are MSBuild projects
 
+---
+
+# The Build script - MSBuild
 - Delphi projects are MSBuild projects
 - Not all settings available from the command line
-- Editing the xml is hard if you have multiple configurations
+
+---
+# The Build script - MSBuild
+- Delphi projects are MSBuild projects
+- Not all settings available from the command line
+- Delphi's use of msbuild is a mess.
+
+---
+# The Build script - MSBuild
+- Delphi projects are MSBuild projects
+- Not all settings available from the command line
+- Delphi's use of msbuild is a mess.
+- On your own when it comes to Version Information.
+
+---
+
+# The Build script - MSBuild
+- Delphi projects are MSBuild projects
+- Not all settings available from the command line
+- Delphi's use of msbuild is a mess.
 - On your own when it comes to Version Information.
 - Depends on Environment variables - rsvars.bat
 
+---
+
+# The Build script - MSBuild
+- Delphi projects are MSBuild projects
+- Not all settings available from the command line
+- Delphi's use of msbuild is a mess.
+- On your own when it comes to Version Information.
+- Depends on Environment variables - rsvars.bat
+- Declarative - making sense of the build process is time consuming
+
+---
+
+# FinalBuilder
+
+- Visual interface
+
+---
+
+# FinalBuilder
+
+- Visual interface
+- Simple to learn
+
+---
+# FinalBuilder
+
+- Visual interface
+- Simple to learn
+- Debugging the build is easy
+- Design and Debug on your desktop, run on desktop or CI Server. 
+
+---
+
+# FinalBuilder
+
+- Visual interface
+- Simple to learn
+- Debugging the build is easy
+- Design and Debug on your desktop, run on desktop or CI Server. 
+- Self documenting (mostly)
+
+---
+
+# FinalBuilder
+
+- Visual interface
+- Simple to learn
+- Debugging the build is easy
+- Design and Debug on your desktop, run on desktop or CI Server. 
+- Self documenting (mostly)
+- Procedural (mostly)
+
+![CI Workflow](img/fbtarget.png)
+
+---
+
+# Continua CI
+## Free version (with some limitations)
+
+- Single concurrent build
 
 
+---
 
+# Continua CI
+## Free version (with some limitations)
 
+- Single concurrent build
+- Local build agent only (same machine as the server)
+
+---
+# Continua CI
+## Free version (with some limitations)
+
+- Single concurrent build
+- Local build agent only (same machine as the server)
+- Unlimited Projects/Configurations
+
+---
+
+# Continua CI
+## Free version (with some limitations)
+
+- Single concurrent build
+- Local build agent only (same machine as the server)
+- Unlimited Projects/Configurations
+- Unlimited Users
+
+---
+# Continua CI
+## Free version (with some limitations)
+
+- Single concurrent build
+- Local build agent only (same machine as the server)
+- Unlimited Projects/Configurations
+- Unlimited Users
+- Licensed per concurrent build.
+- A Single unlocks Unlimited Build Agents.
+
+---
+
+## DEMO TIME!
 
 
     </textarea>

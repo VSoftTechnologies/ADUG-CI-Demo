@@ -9,7 +9,7 @@ uses
 
 begin
   try
-    WriteLn('Hello Adug');
+    WriteLn('Hello ADUG');
   except
     on E: Exception do
       Writeln(E.ClassName, ': ', E.Message);
