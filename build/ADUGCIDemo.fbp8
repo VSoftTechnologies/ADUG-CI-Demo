@@ -7,6 +7,36 @@ begin
     targetid = {B69BDC8A-0DCE-4A39-A64D-001B3EB4328F}
     rootaction
     begin
+      action.propertyset.define
+      begin
+        id = {E776B98C-1C75-46A2-AFEF-76D759BE1E01}
+        propertysetname = VersionInfo
+        propertyset.win32.numbers
+        begin
+          name = VersionInfo
+        end
+      end
+      action.propertyset.setvalues
+      begin
+        id = {1BCD89F9-115A-4C41-A924-D4CF9F564DFB}
+        propertysetname = VersionInfo
+        setvaluesto = "true" +
+                      "true" +
+                      "%VersionInfo_BuildVersion%" +
+                      "true" +
+                      "%VersionInfo_MajorVersion%" +
+                      "%VersionInfo_MinorVersion%" +
+                      "%VersionInfo_ReleaseVersion%" +
+                      ""
+        valuestoset = "AutoUpdateFileVersionString\=-1" +
+                      "AutoUpdateProductVersionString\=-1" +
+                      "BuildVersion\=-1" +
+                      "LinkProductVersion\=-1" +
+                      "MajorVersion\=-1" +
+                      "MinorVersion\=-1" +
+                      "ReleaseVersion\=-1" +
+                      ""
+      end
       action.delphi.build
       begin
         allowimplicitimport = true
@@ -30,7 +60,7 @@ begin
         id = {2484CFFD-5F5E-4FF3-874F-823BDB0455C2}
         includecompiledate = false
         includemanifest = false
-        includeverinfo = false
+        includeverinfo = true
         isdebug = false
         isdll = false
         isprerelease = false
@@ -57,21 +87,22 @@ begin
         useeurekalogcompiler = false
         usefastdcccompiler = false
         useprojectsettings = []
-        usepropertyset = false
+        usepropertyset = true
         useversionfromdof = false
         verboseoutput = false
         versioninfokeys = "CompanyName\=" +
-                          "FileDescription\=$(MSBuildProjectName)" +
+                          "FileDescription\=" +
                           "FileVersion\=1.0.0.0" +
                           "InternalName\=" +
                           "LegalCopyright\=" +
                           "LegalTrademarks\=" +
                           "OriginalFilename\=" +
-                          "ProgramID\=com.embarcadero.$(MSBuildProjectName)" +
-                          "ProductName\=$(MSBuildProjectName)" +
+                          "ProgramID\=" +
+                          "ProductName\=" +
                           "ProductVersion\=1.0.0.0" +
                           "Comments\=" +
                           ""
+        versioninfopropertysetname = VersionInfo
         warningsaserror = false
         workaroundd5bug = false
         delphi.compileroptions
@@ -82,6 +113,10 @@ begin
           assertions = true
           assignableconst = false
           booleval = false
+          compilerwarnings = "-w-UNSAFE_TYPE\=0" +
+                             "-w-UNSAFE_CODE\=0" +
+                             "-w-UNSAFE_CAST\=0" +
+                             ""
           conditionals = RELEASE
           consoleapp = true
           debuginfo = false
@@ -151,7 +186,7 @@ begin
         id = {FA24C286-8C91-460D-A7B9-106DB237886A}
         includecompiledate = false
         includemanifest = false
-        includeverinfo = false
+        includeverinfo = true
         isdebug = false
         isdll = false
         isprerelease = false
@@ -178,21 +213,22 @@ begin
         useeurekalogcompiler = false
         usefastdcccompiler = false
         useprojectsettings = []
-        usepropertyset = false
+        usepropertyset = true
         useversionfromdof = false
         verboseoutput = false
         versioninfokeys = "CompanyName\=" +
-                          "FileDescription\=$(MSBuildProjectName)" +
+                          "FileDescription\=" +
                           "FileVersion\=1.0.0.0" +
                           "InternalName\=" +
                           "LegalCopyright\=" +
                           "LegalTrademarks\=" +
                           "OriginalFilename\=" +
-                          "ProgramID\=com.embarcadero.$(MSBuildProjectName)" +
-                          "ProductName\=$(MSBuildProjectName)" +
+                          "ProgramID\=" +
+                          "ProductName\=" +
                           "ProductVersion\=1.0.0.0" +
                           "Comments\=" +
                           ""
+        versioninfopropertysetname = VersionInfo
         warningsaserror = false
         workaroundd5bug = false
         delphi.compileroptions
@@ -262,5 +298,27 @@ begin
     name = SRCROOT
     variablescope = vtProject
     variabletype = btString
+  end
+  variable
+  begin
+    name = VersionInfo_BuildVersion
+    variablescope = vtProject
+  end
+  variable
+  begin
+    defaultvalue = 0
+    name = VersionInfo_MajorVersion
+    variablescope = vtProject
+    variabletype = btInteger
+  end
+  variable
+  begin
+    name = VersionInfo_MinorVersion
+    variablescope = vtProject
+  end
+  variable
+  begin
+    name = VersionInfo_ReleaseVersion
+    variablescope = vtProject
   end
 end
