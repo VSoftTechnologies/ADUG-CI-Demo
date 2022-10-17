@@ -207,7 +207,7 @@ begin
         alwaysuseconditionalsfromdof = false
         autoincbuild = false
         autoupdatefileversion = true
-        autoupdateproductversion = false
+        autoupdateproductversion = true
         buildall = true
         buildversion = 0
         codepage = 1252
@@ -233,7 +233,7 @@ begin
         keepcfg = false
         linkproductversiontofileversion = true
         locale = 1033
-        majorversion = 1
+        majorversion = 0
         minorversion = 0
         noconfig = false
         platform = Win64
@@ -327,13 +327,145 @@ begin
           varstringchecks = true
         end
       end
+      action.delphi.build
+      begin
+        allowimplicitimport = true
+        alwaysuseconditionalsfromdof = false
+        autoincbuild = false
+        autoupdatefileversion = true
+        autoupdateproductversion = true
+        buildall = true
+        buildversion = 0
+        codepage = 1252
+        compileprojectresources = false
+        compileridl = true
+        configname = Release
+        debugversionnumbers = false
+        delphiversion = Delphi11
+        enabletimeout = false
+        eurekalogverboselogging = false
+        frameworktype = VCL
+        hintsaserror = false
+        iconfile = $(BDS)\\bin\\delphi_PROJECTICON.ico
+        id = {2F53DE95-6486-4D71-A35C-3BCBAC0974BD}
+        includecompiledate = false
+        includemanifest = false
+        includeverinfo = false
+        isdebug = false
+        isdll = false
+        isprerelease = false
+        isprivate = false
+        isspecial = false
+        keepcfg = false
+        linkproductversiontofileversion = true
+        locale = 1033
+        majorversion = 1
+        minorversion = 0
+        noconfig = false
+        platform = Win32
+        platformsdktype = ProjectSDK
+        projectfile = I:\\adug2022\\repo\\tests\\DemoTests.dpr
+        regenerateresource = true
+        releaseversion = 0
+        resourcecompilertype = rcBorland
+        ridloutputsamefolder = true
+        startingdir = %SRCROOT%\\..\\Tests
+        timeoutlength = 1
+        updatedoffile = false
+        updatepackagesource = false
+        updateversioninfokeys = false
+        useeurekalogcompiler = false
+        usefastdcccompiler = false
+        useprojectsettings = []
+        usepropertyset = true
+        useversionfromdof = false
+        verboseoutput = false
+        versioninfokeys = "CompanyName\=" +
+                          "FileDescription\=$(MSBuildProjectName)" +
+                          "FileVersion\=1.0.0.0" +
+                          "InternalName\=" +
+                          "LegalCopyright\=" +
+                          "LegalTrademarks\=" +
+                          "OriginalFilename\=" +
+                          "ProgramID\=com.embarcadero.$(MSBuildProjectName)" +
+                          "ProductName\=$(MSBuildProjectName)" +
+                          "ProductVersion\=1.0.0.0" +
+                          "Comments\=" +
+                          ""
+        versioninfopropertysetname = VersionInfo
+        warningsaserror = false
+        workaroundd5bug = false
+        delphi.compileroptions
+        begin
+          alwaysuseconditionalsfromdof = false
+          alwaysusedelphilibrarypath = false
+          alwaysusedofsearchpath = false
+          assertions = true
+          assignableconst = false
+          booleval = false
+          conditionals = RELEASE;CI
+          consoleapp = false
+          debuginfo = false
+          definitionsonly = false
+          emitruntimetypeinformation = false
+          exportallsymbols = false
+          extendedsyntax = true
+          externaltd32 = false
+          frameworktype = None
+          generatedocumentation = false
+          generatehpp = false
+          hugestrings = true
+          imagebase = 4194304
+          includenamespaces = false
+          includeremotesymbols = false
+          includetd32 = false
+          inlining = inOn
+          iochecking = true
+          librarypath = $(BDSLIB)\\$(Platform)\\release;$(BDSUSERDIR)\\Imports;$(BDSUSERDIR)\\Imports\\$(Platform);$(BDS)\\Imports;$(BDSCOMMONDIR)\\Dcp;$(BDS)\\include
+          linkeroutput = 0
+          localsymbols = false
+          mapfile = 0
+          maxstacksize = 1048576
+          minstacksize = 16384
+          namespaceprefixes = System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;
+          openstrings = true
+          optimisation = true
+          outputdir = %OutputDir%\\$(PLATFORM)
+          overflowchecking = false
+          packages = raizecomponentsvcl;vclwinx;datasnapserver;fmx;vclie;dbxcommondriver;bindengine;vclrestcomponents;firedaccommonodbc;dbxmssqldriver;tb2k;emsclient;firedaccommondriver;appanalytics;indyprotocols;vclx;dbxcds;vcledge;bindcompvclwinx;bindcompfmx;dbxfirebirddriver;synedit_r;hclcore_xe11;inetdb;vsoftuicomponents;gfdlib;firedacsqlitedriver;dbxclientdriver;firedacasadriver;soapmidas;vclactnband;fmxfiredac;dbexpress;frameviewer;firedacinfxdriver;dbxmysqldriver;vclsmp;inet;datasnapcommon;kwizardr;vcltouch;fmxase;dbxodbcdriver;dbrtl;firedacdbxdriver;firedacoracledriver;fmxdae;firedacmsaccdriver;customiptransport;firedacmssqldriver;datasnapindy10servertransport;nxcommonrun;datasnapconnectors;vcldsnap;dbxinterbasedriver;firedacmongodbdriver;indysystem;lmdrtl;firedactdatadriver;vcldb;virtualtreesr;sptbxlib;vclfiredac;bindcomp;firedaccommon;datasnapservermidas;firedacodbcdriver;emsserverresource;nxgridrun;dwwin7controls;indycore;restbackendcomponents;bindcompdbx;lmdrtdocking;rtl;firedacmysqldriver;firedacadsdriver;restcomponents;fbformdesigner;dbxsqlitedriver;vcl;dsnapxml;adortl;dsnapcon;datasnapclient;datasnapproviderclient;dbxsybaseasedriver;nxgriddsgn;dbxdb2driver;vspager;jsdialogpack;vclimg;datasnapfiredac;emsclientfiredac;firedacpgdriver;firedac;firedacdsdriver;inetdbxpress;xmlrtl;tethering;fbsynedithighlighters;bindcompvcl;dsnap;cloudservice;dbxsybaseasadriver;dbxoracledriver;firedacdb2driver;dbxinformixdriver;fmxobj;bindcompvclsmp;datasnapnativeclient;vsofttoolbarr;datasnapconnectorsfreepascal;soaprtl;fbdreamruntime;svgiconimagelist;soapserver;firedacibdriver
+          rangechecking = false
+          recordfieldalign = fa8
+          referenceinfo = false
+          safedivide = false
+          searchpath = %DUNITX%
+          showhints = true
+          showwarnings = true
+          stackframes = false
+          stringchecks = true
+          typedpointers = false
+          unitaliases = WinTypes\=Windows;WinProcs\=Windows;DbiTypes\=BDE;DbiProcs\=BDE;DbiErrs\=BDE
+          unitoutputdir = .\\$(Platform)\\$(Config)
+          usedebugdcu = false
+          usepackages = false
+          varstringchecks = true
+        end
+      end
     end
   end
   variable
   begin
-    defaultvalue = %FBPROJECTDIR%\\Source\\Output
+    defaultvalue = XXXXX
+    name = DUNITX
+    variablescope = vtProject
+    variabletype = btString
+  end
+  variable
+  begin
+    canonicalizepath = true
+    defaultvalue = %FBPROJECTDIR%\\..\\Output
     name = OutputDir
     variablescope = vtProject
+    variabletype = btString
   end
   variable
   begin
