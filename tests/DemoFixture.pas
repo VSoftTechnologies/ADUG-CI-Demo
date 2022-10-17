@@ -29,7 +29,7 @@ end;
 
 procedure TAdugDemoFixture.Test2(const AValue1 : Integer;const AValue2 : Integer);
 begin
-  Assert.AreEqual(AValue1, AValue2);
+  Assert.AreNotEqual(AValue1, AValue2);
 end;
 
 initialization
