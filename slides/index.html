@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Roboto'; }
+      h1, h2, h3 {
+        font-weight: normal;
+        margin-block-start: .25em;
+        margin-block-end: .15em;
+      }
+
+      p, ul {
+        margin-block-start: .25em;
+        margin-block-end: .15em;
+      }
+
+      .remark-slide-content {
+        font-size: 20px  ;
+      }      
+      
+            
+      img {
+		    max-width:100%;
+	    }
+
+      .remark-slide-content h1 {
+        font-size: 36px;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Continuous Integration with Delphi and Continua CI
+
+---
+
+# Agenda
+
+1. Devops Quick Overview 
+2. What is Continuous Integration
+3. CI For Solo Developers
+4. CI vs Automated Builds
+5. A quick look at the Build Script.
+6. CI Getting started.
+
+---
+
+# Devops Quick Overview
+The term 'DevOps' was coined by Patrick Debois, who is considered one of the methodology’s primary gurus (not Microsoft!)
+- Emphasis on breaking down Development and Operations Silos. 
+- Automation of the Software Development Lifecycle
+- Collaboration and Communication
+- Focus on User needs and short feeback loops
+![CI Workflow](img/devops.png)
+---
+
+# What is Continuous Integration
+
+Continuous integration is a DevOps software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run.
+
+![CI Workflow](img/ci-workflow.png)
+
+---
+
+# Continuous Integration benefits
+
+- Feedback loop results in faster bug fixes  
+- Reduced risk - tests run after every build 
+- Fault isolation is easier
+- Progress & Qualilty tracking
+- Saves time and resources (automate all the things)
+- Release more often (because it's easy)
+
+---
+# CI for solo developers?
+
+- Do you run your unit tests after every code change?
+- Running tests on dev machine can be time consuming 
+- Automation is still worthwhile - humans are terrible at repetitive tasks
+- Makes it easier to exit a business - can hand it over in a buildable state
+
+---
+
+# CI vs Automated Builds
+
+- Automated Build - what/how to build
+- Continous Integration - When/Where to build
+- CI Servers have operation knowledge, it knows about the environment
+- Build Scripts know about source code structure, dependencies  
+- Build Script should be in version control along with your source code 
+- Separation of concerns - avoid hard coding knowledge in multiple locations
+- Pass variables from CI server to Build Script (eg, passwords, server locations)
+
+# Getting started with CI
+
+- Determine inputs and outputs
+- Create a build script (batch file, msbuild, FinalBuilder)
+- Make your build script location agnostic (use variables)
+- Configure your CI to run your build script
+
+# The Build Script - Batch files
+
+- Arcane syntax - 
+
+# The Build script - MSBuild
+
+- Delphi projects are MSBuild projects
+- Not all settings available from the command line
+- Editing the xml is hard if you have multiple configurations
+- On your own when it comes to Version Information.
+- Depends on Environment variables - rsvars.bat
+
+
+
+
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
